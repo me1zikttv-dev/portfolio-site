@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gennady.Dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">Gennady.Dev</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#contacts">Оставить заявку</a></li>
+      </ul>
+    </nav>
+    <a href="https://t.me/me1ztv" class="btn-contact" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-telegram-plane"></i> Связаться
+    </a>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Секции -->
+  <section id="about" class="section fade-in">
+    <div class="container about-container">
+      <div class="about-img">
+        <img src="img/me.jpg" alt="Gena">
+      </div>
+      <div class="about-text">
+        <h2>Обо мне</h2>
+        <p>Привет! Меня зовут Гена, мне 27 лет. Я занимаюсь веб-разработкой и настройкой компьютеров. Люблю создавать аккуратные, функциональные и красивые сайты, а также оптимизировать любые IT-процессы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section fade-in">
+    <div class="container">
+      <h2>Услуги</h2>
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-code"></i>
+          <h3>Веб-разработка</h3>
+          <p>Создание адаптивных сайтов и лендингов, оптимизированных под любые устройства.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-laptop"></i>
+          <h3>Настройка ПК</h3>
+          <p>Обслуживание и настройка компьютеров и ноутбуков, установка ПО, оптимизация работы системы.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-bolt"></i>
+          <h3>IT-консультации</h3>
+          <p>Помощь с выбором техники, совет по программам и автоматизации процессов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section fade-in">
+    <div class="container">
+      <h2>Портфолио</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/project1.jpg" alt="Проект 1">
+          <h3>Сайт-визитка</h3>
+        </div>
+        <div class="card">
+          <img src="img/project2.jpg" alt="Проект 2">
+          <h3>Лендинг</h3>
+        </div>
+        <div class="card">
+          <img src="img/project3.jpg" alt="Проект 3">
+          <h3>Настройка ПК</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section fade-in">
+    <div class="container">
+      <h2>Оставить заявку</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="text" name="project" placeholder="Коротко о проекте" required>
+        <button type="submit">Отправить в Telegram</button>
+      </form>
+      <p id="form-status" style="margin-top:10px; color:#2bc0e4; font-weight:600;"></p>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
