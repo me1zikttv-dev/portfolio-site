@@ -5,14 +5,13 @@ const contactForm = document.getElementById('contactForm');
 const sections = document.querySelectorAll('.section');
 const statusMsg = document.getElementById('form-status');
 
-/* Бургер */
+/* ====== Бургер ====== */
 if (burger && nav) {
   burger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
 }
 
-/* Подсветка пунктов меню */
 if (navLinks.length > 0) {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -23,7 +22,7 @@ if (navLinks.length > 0) {
   });
 }
 
-/* Анимация появления секций */
+/* ====== Анимация появления секций ====== */
 if (sections.length > 0) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -36,7 +35,7 @@ if (sections.length > 0) {
   sections.forEach(section => observer.observe(section));
 }
 
-/* Форма → Telegram бот */
+/* ====== Форма → Telegram бот ====== */
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -68,3 +67,11 @@ if (contactForm) {
     }
   });
 }
+
+/* ====== FAQ аккордеон ====== */
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});

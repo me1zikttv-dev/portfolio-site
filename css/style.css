@@ -32,14 +32,12 @@ html, body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-/* Логотип */
 .logo {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
 }
 
-/* Меню */
 .nav {
   flex: 1;
   display: flex;
@@ -66,7 +64,6 @@ html, body {
   font-weight: 700;
 }
 
-/* Кнопка "Связаться" */
 .btn-contact {
   display: inline-flex;
   align-items: center;
@@ -87,7 +84,6 @@ html, body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Бургер */
 .burger {
   display: none;
   flex-direction: column;
@@ -119,23 +115,19 @@ html, body {
   background: rgba(255,255,255,0.05);
 }
 
-/* Появление секции при скролле */
 .section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Контейнеры */
 .container { max-width: 1200px; width: 100%; }
 .about-container { display: flex; align-items: center; gap: 40px; }
 .about-img img { width: 250px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
 .about-text { max-width: 700px; }
 
-/* Заголовки и тексты */
 h2 { font-size: 36px; margin-bottom: 20px; }
 p { font-size: 18px; line-height: 1.6; color: #ddd; }
 
-/* Карточки */
 .cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
 .card {
   background: rgba(255,255,255,0.08);
@@ -196,7 +188,6 @@ form button {
 
 form button:hover { background: #0f9b8e; transform: translateY(-2px); }
 
-/* Сообщение статуса */
 #form-status {
   text-align: center;
   margin-top: 15px;
@@ -217,4 +208,62 @@ form button:hover { background: #0f9b8e; transform: translateY(-2px); }
   .burger { display: flex; }
   .btn-contact { display: none; }
   .section { padding: 120px 20px; margin-bottom: 40px; }
+}
+
+/* ====== FAQ ====== */
+#faq {
+  padding: 60px 20px;
+}
+
+#faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #2bc0e4;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.1);
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.faq-item p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+  color: #ccc;
+}
+
+.faq-item.active p {
+  max-height: 500px;
+  padding: 10px 0 0 0;
+}
+
+.faq-item .arrow {
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(90deg);
 }
